@@ -8,7 +8,7 @@
 
 #import "LFAppDelegate.h"
 
-#import "LFMasterViewController.h"
+#import "LFTraceTableViewController.h"
 
 @implementation LFAppDelegate
 
@@ -17,10 +17,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
-    LFMasterViewController *masterViewController = [[LFMasterViewController alloc] initWithNibName:@"LFMasterViewController" bundle:nil];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    LFTraceTableViewController *traceTableViewController = [[LFTraceTableViewController alloc] initWithNibName:nil bundle:nil];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:traceTableViewController];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
